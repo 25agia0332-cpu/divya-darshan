@@ -1,0 +1,23 @@
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Arial,Helvetica,sans-serif;color:#24201d;background:#fffaf2;line-height:1.6}
+.navbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;justify-content:space-between;padding:16px 7%;background:#fffaf2eF;backdrop-filter:blur(10px);box-shadow:0 2px 14px #00000012}
+.logo{font-size:1.45rem;font-weight:800;color:#8b3f16;text-decoration:none}.logo span{color:#d48a19}
+nav{display:flex;gap:24px}nav a{color:#33251d;text-decoration:none;font-weight:600}nav a:hover{color:#c76b1c}
+.menu-btn{display:none;border:0;background:none;font-size:1.6rem}
+.hero{min-height:78vh;display:flex;align-items:center;padding:70px 8%;background:linear-gradient(120deg,#fff4d9,#ffe0b2 48%,#f8c98d);position:relative;overflow:hidden}
+.hero:after{content:"🛕";position:absolute;right:7%;bottom:-20px;font-size:16rem;opacity:.13}
+.hero-content{max-width:720px;position:relative;z-index:1}.tagline,.section-heading p{font-weight:800;color:#b45c16;letter-spacing:2px}
+h1{font-size:clamp(2.5rem,6vw,5rem);line-height:1.05;margin:15px 0 22px}h1 span{color:#bd681b}
+.hero-content>p:not(.tagline){font-size:1.12rem;max-width:650px;color:#594a40}
+.hero-buttons{display:flex;gap:14px;margin-top:30px}.btn{display:inline-block;padding:13px 23px;border-radius:30px;border:0;text-decoration:none;font-weight:800;cursor:pointer}
+.primary{background:#9c4817;color:white}.primary:hover{background:#7d3710}.secondary{background:white;color:#8d461b}
+.section{padding:80px 8%}.light{background:#fff3df}.section-heading{text-align:center;max-width:750px;margin:0 auto 42px}.section-heading h2{font-size:2.2rem;margin-top:7px}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.card{background:white;padding:28px;border-radius:18px;box-shadow:0 7px 25px #5e351210}.icon{font-size:2.3rem;margin-bottom:10px}.card h3{margin-bottom:6px}
+.temple-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}.temple-card{background:white;border-radius:18px;overflow:hidden;box-shadow:0 7px 25px #5e351218}.temple-image{height:160px;display:flex;align-items:center;justify-content:center;font-size:5rem}.tirumala{background:#e5c07b}.yadadri{background:#d99a70}.srisailam{background:#c5a9d6}.varanasi{background:#e6a85b}.temple-body{padding:20px}.temple-body p{color:#76685f;margin-bottom:12px}.temple-body button{border:0;background:#9c4817;color:#fff;padding:9px 15px;border-radius:20px;cursor:pointer}
+.planner{background:#2e211b;color:white}.planner .section-heading p{color:#f2b35c}.planner-form{max-width:850px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px;background:#402d24;padding:30px;border-radius:22px}.form-group{display:flex;flex-direction:column;gap:6px}.form-group label{font-weight:700}.form-group input,.form-group select,.contact-form input,.contact-form textarea{padding:13px;border-radius:10px;border:1px solid #d8c7b8;font:inherit}.full{grid-column:1/-1}.result{max-width:850px;margin:20px auto 0;background:#fff4dc;color:#33251d;padding:20px;border-radius:15px}.hidden{display:none}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;text-align:center}.why-grid div{padding:25px}.why-grid strong{font-size:2rem;color:#c16a20}.why-grid h3{margin:8px 0}
+.contact-form{max-width:650px;margin:auto;display:grid;gap:14px}.contact-form textarea{resize:vertical}.success{text-align:center;margin-top:15px;color:#247a3c;font-weight:700}
+footer{background:#211712;color:#fff;padding:35px 8%;display:flex;justify-content:space-between;gap:20px;align-items:center}footer h2{color:#f3b35d}
+@media(max-width:900px){.cards{grid-template-columns:1fr 1fr}.temple-grid{grid-template-columns:1fr 1fr}.why-grid{grid-template-columns:1fr}}
+@media(max-width:650px){.navbar{padding:14px 5%}.menu-btn{display:block}nav{display:none;position:absolute;top:64px;left:0;right:0;background:#fffaf2;flex-direction:column;padding:20px 7%;box-shadow:0 8px 15px #00000010}nav.open{display:flex}.hero{padding:55px 6%;min-height:75vh}.hero:after{font-size:8rem}.section{padding:60px 6%}.cards,.temple-grid,.planner-form{grid-template-columns:1fr}.full{grid-column:auto}.hero-buttons{flex-direction:column}.btn{text-align:center}footer{flex-direction:column;text-align:center}}

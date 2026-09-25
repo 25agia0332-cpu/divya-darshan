@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Divya Darshan - Plan temple trips with transport, stays, food, guides and sightseeing in one place.">
+  <title>Divya Darshan | Your Complete Temple Trip</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="navbar">
+    <a class="logo" href="#home">🙏 Divya <span>Darshan</span></a>
+    <button class="menu-btn" id="menuBtn">☰</button>
+    <nav id="navLinks">
+      <a href="#home">Home</a>
+      <a href="#services">Services</a>
+      <a href="#temples">Temples</a>
+      <a href="#planner">Trip Planner</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="tagline">🙏 PLAN • TRAVEL • EXPERIENCE</p>
+        <h1>Your Complete <span>Temple Trip</span>, In One Place.</h1>
+        <p>Discover temples, book local transport and stays, find food, connect with guides and explore nearby attractions with Divya Darshan.</p>
+        <div class="hero-buttons">
+          <a class="btn primary" href="#planner">Plan My Journey</a>
+          <a class="btn secondary" href="#services">Explore Services</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="services">
+      <div class="section-heading">
+        <p>WHAT WE OFFER</p>
+        <h2>Everything You Need for Your Journey</h2>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">🚗</div><h3>Car & Cab</h3><p>Connect with local transport providers for temple visits and sightseeing.</p></article>
+        <article class="card"><div class="icon">🏨</div><h3>Stay</h3><p>Find suitable hotels and stays close to your destination.</p></article>
+        <article class="card"><div class="icon">🍛</div><h3>Food</h3><p>Discover nearby restaurants and local food options.</p></article>
+        <article class="card"><div class="icon">🧑‍💼</div><h3>Local Guides</h3><p>Connect with local guides for a smoother travel experience.</p></article>
+        <article class="card"><div class="icon">🛕</div><h3>Temple Info</h3><p>Explore temple details, important information and visit planning.</p></article>
+        <article class="card"><div class="icon">📍</div><h3>Nearby Places</h3><p>Find attractions and places worth visiting around your temple.</p></article>
+      </div>
+    </section>
+
+    <section class="section light" id="temples">
+      <div class="section-heading">
+        <p>DESTINATIONS</p>
+        <h2>Popular Temple Destinations</h2>
+      </div>
+      <div class="temple-grid">
+        <article class="temple-card"><div class="temple-image tirumala">🛕</div><div class="temple-body"><h3>Tirumala</h3><p>Andhra Pradesh</p><button onclick="chooseTemple('Tirumala')">Plan Visit</button></div></article>
+        <article class="temple-card"><div class="temple-image yadadri">🛕</div><div class="temple-body"><h3>Yadadri</h3><p>Telangana</p><button onclick="chooseTemple('Yadadri')">Plan Visit</button></div></article>
+        <article class="temple-card"><div class="temple-image srisailam">🛕</div><div class="temple-body"><h3>Srisailam</h3><p>Andhra Pradesh</p><button onclick="chooseTemple('Srisailam')">Plan Visit</button></div></article>
+        <article class="temple-card"><div class="temple-image varanasi">🛕</div><div class="temple-body"><h3>Varanasi</h3><p>Uttar Pradesh</p><button onclick="chooseTemple('Varanasi')">Plan Visit</button></div></article>
+      </div>
+    </section>
+
+    <section class="section planner" id="planner">
+      <div class="section-heading">
+        <p>PLAN YOUR JOURNEY</p>
+        <h2>Create a Simple Trip Plan</h2>
+      </div>
+      <form id="tripForm" class="planner-form">
+        <div class="form-group"><label for="name">Your Name</label><input id="name" required placeholder="Enter your name"></div>
+        <div class="form-group"><label for="temple">Temple</label>
+          <select id="temple" required>
+            <option value="">Select a temple</option>
+            <option>Tirumala</option><option>Yadadri</option><option>Srisailam</option><option>Varanasi</option>
+          </select>
+        </div>
+        <div class="form-group"><label for="date">Travel Date</label><input id="date" type="date" required></div>
+        <div class="form-group"><label for="people">Travellers</label><input id="people" type="number" min="1" max="50" value="2" required></div>
+        <div class="form-group"><label for="service">Main Service</label>
+          <select id="service" required>
+            <option value="">Choose service</option>
+            <option>Car / Cab</option><option>Hotel / Stay</option><option>Food</option><option>Local Guide</option><option>Complete Trip Support</option>
+          </select>
+        </div>
+        <button class="btn primary full" type="submit">Create Trip Plan</button>
+      </form>
+      <div id="result" class="result hidden"></div>
+    </section>
+
+    <section class="section why">
+      <div class="section-heading"><p>OUR IDEA</p><h2>Why Divya Darshan?</h2></div>
+      <div class="why-grid">
+        <div><strong>01</strong><h3>One Platform</h3><p>Reduce the need to search for every travel service separately.</p></div>
+        <div><strong>02</strong><h3>Local Support</h3><p>Help local drivers, hotels, restaurants and guides reach pilgrims.</p></div>
+        <div><strong>03</strong><h3>Easy Planning</h3><p>Build a basic journey plan before starting your temple visit.</p></div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="section-heading"><p>GET IN TOUCH</p><h2>Start Your Journey</h2></div>
+      <form id="contactForm" class="contact-form">
+        <input required placeholder="Your Name">
+        <input required type="tel" placeholder="Mobile Number">
+        <input required type="email" placeholder="Email Address">
+        <textarea required rows="5" placeholder="Tell us about your travel requirement"></textarea>
+        <button class="btn primary" type="submit">Send Enquiry</button>
+      </form>
+      <p id="contactMsg" class="success"></p>
+    </section>
+  </main>
+
+  <footer>
+    <div><h2>🙏 Divya Darshan</h2><p>Your Complete Temple Trip, In One Place.</p></div>
+    <p>© 2026 Divya Darshan. Student startup project.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
